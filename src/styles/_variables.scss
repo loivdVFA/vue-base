@@ -1,0 +1,40 @@
+:root {
+    --color-primary: #F9FAFC;
+    --color-black: #333333;
+    --color-white: #FFFFFF;
+    --color-C01: #266699;
+    --color-C02: #383737;
+    --color-C03: #D0DFEC;
+    --color-C04: #E4E4E4D4;
+    --color-C05: #BDBDBD;
+    --color-C06: #E60000;
+    --color-C07: #E0E0E0;
+    --color-C08: #F2F2F2;
+    --color-C09: #E7C5FC;
+
+    --box-shadow-search: 1px 1px 6px 0px #00000040;
+}
+
+img, svg {
+    &:hover {
+      cursor: pointer;
+    }
+}
+
+.line-overflow-1 {
+    display: block;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+.line-overflow-2 {
+  display: block;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
