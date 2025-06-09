@@ -38,7 +38,7 @@ async function subscribeUser() {
      subscription
   }
   // Gửi subscription về server (Node)
-  await fetch('http://localhost:3000/subscribe', {
+  await fetch('https://be-webpush.srv02.dtsmart.dev/subscribe', {
     method: 'POST',
     body: JSON.stringify(bodySub),
     headers: {
@@ -53,7 +53,7 @@ const sendNotification = async () => {
       title: "Loi Test",
       body: `Tin nhan moi ne ${numberRand}`
     }
-    await fetch('http://localhost:3000/send',{
+    await fetch('https://be-webpush.srv02.dtsmart.dev/send',{
       method: 'POST',
       body: JSON.stringify(bodySend),
        headers: {
