@@ -1,4 +1,17 @@
-// // sw.js
+// // sw.js// public/sw.js - Service Worker tùy chỉnh với Workbox
+// import { precacheAndRoute, cleanupOutdatedCaches } from 'workbox-precaching';
+
+
+// // Precache tất cả assets được build
+// precacheAndRoute(self.__WB_MANIFEST);
+// cleanupOutdatedCaches();
+import { precacheAndRoute, cleanupOutdatedCaches } from 'workbox-precaching'
+
+// chỗ Workbox inject danh sách file precache
+precacheAndRoute(self.__WB_MANIFEST)
+
+// optional: dọn cache cũ
+cleanupOutdatedCaches()
 
 self.addEventListener("push", (event) => {
   let data = {};
